@@ -1,9 +1,76 @@
 git init
-git remote add origin https://trung91:%28LR8Beauty%29@github.com/trung91/manager.git
+git remote add origin https://trung91:xxxxxxxxx@github.com/trung91/manager.git
 git pull
 git checkout master
 
 git status
 
 git add note.txt
+git commit
 git push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ls -al ~/.ssh
+
+
+[trungnd10@thinclient-02 ~]$ ssh-keygen -t rsa -C "trungnguyen.se.1991@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/users/trungnd10/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /users/trungnd10/.ssh/id_rsa.
+Your public key has been saved in /users/trungnd10/.ssh/id_rsa.pub.
+The key fingerprint is:
+52:c1:57:87:91:30:04:dc:92:37:64:0b:74:93:93:dd trungnguyen.se.1991@gmail.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|       +=*O*o=.  |
+|        ==O++.E  |
+|        .+.o     |
+|       .         |
+|      . S        |
+|       .         |
+|                 |
+|                 |
+|                 |
++-----------------+
+[trungnd10@thinclient-02 ~]$
+
+[trungnd10@thinclient-02 ~]$ eval "$(ssh-agent -s)"
+Agent pid 15778
+[trungnd10@thinclient-02 ~]$ 
+
+[trungnd10@thinclient-02 ~]$ ssh-add ~/.ssh/id_rsa
+Identity added: /users/trungnd10/.ssh/id_rsa (/users/trungnd10/.ssh/id_rsa)
+[trungnd10@thinclient-02 ~]$ 
+
+~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA1HYDbaS09b3PtVWB91tv+c+uLzy/d8HXZ+bzYGBp9LmIogdk6QmhqxypBUghpOqzva63vuK4JHeEE83F1OCq69TDLBeCEhUWoiVac/66dtqJQQdpdjgg55kU7x1BiKRPxwc+nHxBG5iodg9K23xoLesbaulpqrKBPchMzYu6J5nVGKqaTYG8koxBFAVggJo0GjiQejPDVVf5ZdAl5HObmizXp/PTgiM+OElU3EcnrQqQKc4/P3hx5SJ/6u5uWslvgJVxBbuZW+QGbyBcTpdm+/Hz0sybFcV1uwML/i98FHZuAlURKan16n3jTbGrpVReVZHLjrLjd3PzJH89pWMEKw== trungnguyen.se.1991@gmail.com
+
+
+Test
+
+ssh -T git@github.com
+
+[trungnd10@thinclient-02 ~]$ ssh -T git@github.com
+The authenticity of host 'github.com (192.30.252.130)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.252.130' (RSA) to the list of known hosts.
+Hi trung91! You've successfully authenticated, but GitHub does not provide shell access.
+[trungnd10@thinclient-02 ~]$
+
+
