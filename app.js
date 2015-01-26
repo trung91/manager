@@ -1,16 +1,11 @@
-angular.module('flapperNews', [])
-.controller('MainCtrl', [
-'$scope',
-function($scope){
-  $scope.test = 'Hello world!';
+var http = require('http');
 
-$scope.posts = [
-  'post 1',
-  'post 2',
-  'post 3',
-  'post 4',
-  'post 5'
-];
+var content = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><title>ABC</title><body>Nguyễn Đức Trung</body></html>";
 
-}]);
+http.createServer(function (request, response) {
+    //response.writeHead(200, {'Content-Type': 'text/plain'});
+    response.writeHead(200, {'Content-Type': 'application/xhtml+xml; charset=utf-8'});
+    response.end(content+'\n');
+}).listen(8080);
 
+console.log('Server started');
