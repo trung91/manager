@@ -1,5 +1,6 @@
 git init
 git remote add origin https://trung91:xxxxxxxxx@github.com/trung91/manager.git
+git remote add origin git@github.com:trung91/manager.git
 git pull
 git checkout master
 
