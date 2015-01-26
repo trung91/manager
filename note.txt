@@ -1,0 +1,9 @@
+git init
+git remote add origin https://trung91:%28LR8Beauty%29@github.com/trung91/manager.git
+git pull
+git checkout master
+
+git status
+
+git add note.txt
+git push
