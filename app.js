@@ -2,7 +2,7 @@ var http = require('http');
 
 var content = "Nguyễn Đức Trung";
 
-content += " xin chao";
+content += "";
 
 var document = "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\"><title>ABC</title><body>" + content + "</body></html>";
 
