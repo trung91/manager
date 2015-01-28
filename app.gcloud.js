@@ -12,6 +12,12 @@ dataset = gcloud.datastore.dataset({
   keyFilename: './keyfile-1991.json'
 });
 
+dataset.get(dataset.key(['Trivia', 'hgtg']), function(err, entity) {
+  console.log(err || entity);
+});
+
+console.log("other:");
+
 dataset.get(dataset.key(['Product', 'Computer']), function(err, entity) {
   console.log(err || entity);
 });
